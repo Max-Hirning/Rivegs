@@ -8,7 +8,7 @@
 		"build": "rimraf dist && tsc",
 		"start": "nodemon src/index.ts",
 		"ts.check": "tsc --project tsconfig.json",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"pre-commit": "npm run ts.check && npm run build && npm run add-build"
 	},
 	"pre-commit": [
 		"ts.check",

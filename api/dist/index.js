@@ -20,7 +20,7 @@ cloudinary_1.default.config({
 app.use(body_parser_1.default.json());
 app.use(`/assets`, express_1.default.static(`assets`));
 app.use(body_parser_1.default.urlencoded({ extended: false }));
-app.use((0, cors_1.default)({ origin: `*`, methods: [`GET`, `POST`, `PUT`, `DELETE`] }));
+app.use((0, cors_1.default)());
 (0, connectDB_1.default)();
 router.init();
 app.listen(process.env.PORT, () => console.log(`${process.env.STARTMESSAGE}${process.env.PORT}`));
